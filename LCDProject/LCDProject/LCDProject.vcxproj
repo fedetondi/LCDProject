@@ -118,10 +118,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="hitachiLCD.cpp" />
     <ClCompile Include="phase1.cpp" />
     <ClCompile Include="phase2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="hitachiLCD.h" />
     <ClInclude Include="phase1.h" />
     <ClInclude Include="phase2.h" />
   </ItemGroup>

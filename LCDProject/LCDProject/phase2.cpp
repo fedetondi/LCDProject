@@ -1,7 +1,10 @@
 #include "phase2.h"
 
-bool HitachiLCD::lcdClear()
+basicLCD::basicLCD()
 {
-
+	cadd = 1;
 }
 
+basicLCD::~basicLCD()
+{
+}

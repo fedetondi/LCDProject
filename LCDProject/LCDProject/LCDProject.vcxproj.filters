@@ -21,12 +21,18 @@
     <ClCompile Include="phase1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hitachiLCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phase2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="phase1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hitachiLCD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

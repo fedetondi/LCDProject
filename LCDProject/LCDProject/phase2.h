@@ -189,23 +189,3 @@ protected:
 	void lcdUpdateCursor();
 };
 
-class HitachiLCD : public basicLCD
-{
-public:
-	HitachiLCD();
-	~HitachiLCD();
-	virtual bool lcdInitOk();
-	virtual FT_STATUS lcdGetError();
-	virtual bool lcdClear();
-	virtual bool lcdClearToEOL();
-	virtual basicLCD& operator<<(const unsigned char c);
-	virtual basicLCD& operator<<(const unsigned char * c);
-	virtual bool lcdMoveCursorUp();
-	virtual bool lcdMoveCursorDown();
-	virtual bool lcdMoveCursorRight();
-	virtual bool lcdMoveCursorLeft();
-	virtual bool lcdSetCursorPosition(const cursorPosition pos);
-	virtual cursorPosition lcdGetCursorPosition();
-
-
-};
