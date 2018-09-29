@@ -55,12 +55,14 @@
 #define LCD_D7_OFF	(LCD_D7 ^ LCD_D7)
 
 //	INSTRUCCIONES
-#define CLEAR_DISPLAY		00000001b
-#define RETURN_HOME			00000010b
-#define ENTRY_MODE_SET		00000110b
-#define	CURSOR_MOVE			00010100b
-#define FUNCTION_SET_4BITS	00101000b
-#define FUNCTION_SET_8BITS	00111000b
+#define CLEAR_DISPLAY		0X01
+#define RETURN_HOME			0X02
+#define ENTRY_MODE_SET		0X06
+#define	CURSOR_MOVE			0X14
+#define FUNCTION_SET_4BITS	0X28
+#define FUNCTION_SET_8BITS	0X38
+#define DISPLAY_OFF			0X08
+#define DISPLAY_ON			0X0F
 
 //
 typedef unsigned char BYTE;
@@ -99,13 +101,8 @@ public:
 	*/
 	bool lcdWriteNybble(FT_HANDLE *deviceHandler, BYTE valor);
 
-	/*	lcdWriteByte
-	*	Recibe:		puntero al FTDI, valor del dato a mostrar o instruccion y valor del RS
-	*	Devuelve:	"true" en caso de exito en la escritura
-	*	Funcion:	Sirve en modo 8 bits y si se trabaja en modo 4 bits se llama dos veces a lcdWriteNybble
-	*/
-	bool lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE RS);
 private:
 	DWORD sizeSent;
 	FT_STATUS status;
+	FT_HANDLE deviceHandler;
 };
