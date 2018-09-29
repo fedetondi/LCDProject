@@ -85,32 +85,34 @@ public:
 	*	Devuelve: puntero a controlador FTDI
 	*	Funcion: Inicializa el FTDI y el LCD
 	*/
-	FT_HANDLE	*lcdInit(int iDevice);
+	FT_LCD(int iDevice);
 
 	/*	lcdWriteIR
 	*	Recibe:		puntero al FTDI y valor de la instruccion
 	*	Devuelve:	"true" en caso de exito en la escritura
 	*	Funcion:	escribit un byte al IR
 	*/
-	bool lcdWriteIR(FT_HANDLE * deviceHandler, BYTE valor);
+	bool lcdWriteIR(BYTE valor);
 
 	/*	lcdWriteDR
 	*	Recibe:		puntero al FTDI y valor del dato a mostrar
 	*	Devuelve:	"true" en caso de exito en la escritura
 	*	Funcion:	escribit un byte al DR
 	*/
-	bool lcdWriteDR(FT_HANDLE * deviceHandler, BYTE valor);
+	bool lcdWriteDR(BYTE valor);
 
+	FT_STATUS getStatus();
+	lcdErr_t getError();
+
+private:
 	/*	lcdWriteNybble
 	*	Recibe:		puntero al FTDI y valor del dato a mostrar
 	*	Devuelve:	"true" en caso de exito en la escritura
 	*	Funcion:	pasarle al display en modo 4 bits el valor a mostrar, proveniente de lcdWriteDR
 	*/
-	bool lcdWriteNybble(FT_HANDLE *deviceHandler, BYTE valor);
-
-private:
+	bool lcdWriteNybble(BYTE valor);
 	DWORD sizeSent;
-	FT_STATUS status;
 	FT_HANDLE deviceHandler;
+	FT_STATUS status;
 	lcdErr_t error;
 };
