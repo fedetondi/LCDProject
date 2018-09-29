@@ -32,13 +32,13 @@ public:
 	*=====================================================*/
 	~basicLCD();
 	/*=====================================================
-* Name: lcdInitOk
-* Entra: -
-* Resulta: No genera ningún cambio en el display.
-* Devuelve en su nombre “true” si el display se inicializó
-* correctamente (el constructor no tuvo errores) o “false
-* en caso contrario.
-*=====================================================*/
+	* Name: lcdInitOk
+	* Entra: -
+	* Resulta: No genera ningún cambio en el display.
+	* Devuelve en su nombre “true” si el display se inicializó
+	* correctamente (el constructor no tuvo errores) o “false
+	* en caso contrario.
+	*=====================================================*/
 	virtual bool lcdInitOk() = 0;
 
 	/*=====================================================

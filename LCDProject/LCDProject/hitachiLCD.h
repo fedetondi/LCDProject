@@ -1,5 +1,6 @@
 #pragma once
 #include "phase2.h"
+#include "phase1.h"
 
 
 class hitachiLCD : public basicLCD
@@ -19,4 +20,6 @@ public:
 	virtual bool lcdMoveCursorLeft();
 	virtual bool lcdSetCursorPosition(const cursorPosition pos);
 	virtual cursorPosition lcdGetCursorPosition();
+private:
+	FT_LCD display;
 };

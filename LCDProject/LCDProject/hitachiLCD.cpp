@@ -1,9 +1,10 @@
 #include "hitachiLCD.h"
+#define CLEAR_DISPLAY 0x01
+#define RETURN_HOME 0x02
 
-
-
-hitachiLCD::hitachiLCD()
+hitachiLCD::hitachiLCD() : display(5)
 {
+
 }
 
 
@@ -13,16 +14,26 @@ hitachiLCD::~hitachiLCD()
 
 bool hitachiLCD::lcdInitOk()
 {
-	return false;
+	if ()							//NO SE QUE VA
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 FT_STATUS hitachiLCD::lcdGetError()
 {
-	return FT_STATUS();
+	return display.getStatus();
 }
 
 bool hitachiLCD::lcdClear()
 {
+	display.lcdWriteIR(CLEAR_DISPLAY);
+	display.lcdWriteIR(RETURN_HOME);
+
 	return false;
 }
 
