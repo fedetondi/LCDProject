@@ -32,13 +32,13 @@ public:
 	*=====================================================*/
 	~basicLCD();
 	/*=====================================================
-* Name: lcdInitOk
-* Entra: -
-* Resulta: No genera ningún cambio en el display.
-* Devuelve en su nombre “true” si el display se inicializó
-* correctamente (el constructor no tuvo errores) o “false
-* en caso contrario.
-*=====================================================*/
+	* Name: lcdInitOk
+	* Entra: -
+	* Resulta: No genera ningún cambio en el display.
+	* Devuelve en su nombre “true” si el display se inicializó
+	* correctamente (el constructor no tuvo errores) o “false
+	* en caso contrario.
+	*=====================================================*/
 	virtual bool lcdInitOk() = 0;
 
 	/*=====================================================
@@ -189,23 +189,3 @@ protected:
 	void lcdUpdateCursor();
 };
 
-class HitachiLCD : public basicLCD
-{
-public:
-	HitachiLCD();
-	~HitachiLCD();
-	virtual bool lcdInitOk();
-	virtual FT_STATUS lcdGetError();
-	virtual bool lcdClear();
-	virtual bool lcdClearToEOL();
-	virtual basicLCD& operator<<(const unsigned char c);
-	virtual basicLCD& operator<<(const unsigned char * c);
-	virtual bool lcdMoveCursorUp();
-	virtual bool lcdMoveCursorDown();
-	virtual bool lcdMoveCursorRight();
-	virtual bool lcdMoveCursorLeft();
-	virtual bool lcdSetCursorPosition(const cursorPosition pos);
-	virtual cursorPosition lcdGetCursorPosition();
-
-
-};
