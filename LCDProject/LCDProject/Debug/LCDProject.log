@@ -1,0 +1,357 @@
+﻿  phase1.cpp
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(59): error C2146: syntax error: missing ';' before identifier 'FT_HANDLE'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): error C2146: syntax error: missing ';' before identifier 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(172): error C2065: 'DWORD': undeclared identifier
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(172): error C2513: 'void *': no variable declared before '='
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C2146: syntax error: missing ';' before identifier 'FT_Open'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2146: syntax error: missing ';' before identifier 'FT_OpenEx'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2146: syntax error: missing ';' before identifier 'FT_ListDevices'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2146: syntax error: missing ';' before identifier 'FT_Close'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2146: syntax error: missing ';' before identifier 'FT_Read'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2146: syntax error: missing ';' before identifier 'FT_Write'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2146: syntax error: missing ';' before identifier 'FT_IoCtl'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2146: syntax error: missing ';' before identifier 'FT_SetBaudRate'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2146: syntax error: missing ';' before identifier 'FT_SetDivisor'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2146: syntax error: missing ';' before identifier 'FT_SetDataCharacteristics'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2146: syntax error: missing ';' before identifier 'FT_SetFlowControl'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2146: syntax error: missing ';' before identifier 'FT_ResetDevice'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2146: syntax error: missing ';' before identifier 'FT_SetDtr'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2146: syntax error: missing ';' before identifier 'FT_ClrDtr'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2146: syntax error: missing ';' before identifier 'FT_SetRts'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2146: syntax error: missing ';' before identifier 'FT_ClrRts'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2146: syntax error: missing ';' before identifier 'FT_GetModemStatus'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2146: syntax error: missing ';' before identifier 'FT_SetChars'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2146: syntax error: missing ';' before identifier 'FT_Purge'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2146: syntax error: missing ';' before identifier 'FT_SetTimeouts'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2146: syntax error: missing ';' before identifier 'FT_GetQueueStatus'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2146: syntax error: missing ';' before identifier 'FT_SetEventNotification'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2146: syntax error: missing ';' before identifier 'FT_GetStatus'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2146: syntax error: missing ';' before identifier 'FT_SetBreakOn'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): fatal error C1003: error count exceeds 100; stopping compilation
+  phase2.cpp
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(59): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(59): error C2146: syntax error: missing ';' before identifier 'FT_HANDLE'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): error C2146: syntax error: missing ';' before identifier 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(172): error C2065: 'DWORD': undeclared identifier
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(172): error C2513: 'void *': no variable declared before '='
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): error C2146: syntax error: missing ';' before identifier 'FT_Open'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(299): error C2146: syntax error: missing ';' before identifier 'FT_OpenEx'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(306): error C2146: syntax error: missing ';' before identifier 'FT_ListDevices'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(313): error C2146: syntax error: missing ';' before identifier 'FT_Close'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(318): error C2146: syntax error: missing ';' before identifier 'FT_Read'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(326): error C2146: syntax error: missing ';' before identifier 'FT_Write'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(334): error C2146: syntax error: missing ';' before identifier 'FT_IoCtl'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(346): error C2146: syntax error: missing ';' before identifier 'FT_SetBaudRate'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(352): error C2146: syntax error: missing ';' before identifier 'FT_SetDivisor'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(358): error C2146: syntax error: missing ';' before identifier 'FT_SetDataCharacteristics'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(366): error C2146: syntax error: missing ';' before identifier 'FT_SetFlowControl'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(374): error C2146: syntax error: missing ';' before identifier 'FT_ResetDevice'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(379): error C2146: syntax error: missing ';' before identifier 'FT_SetDtr'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(384): error C2146: syntax error: missing ';' before identifier 'FT_ClrDtr'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(389): error C2146: syntax error: missing ';' before identifier 'FT_SetRts'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(394): error C2146: syntax error: missing ';' before identifier 'FT_ClrRts'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(399): error C2146: syntax error: missing ';' before identifier 'FT_GetModemStatus'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(405): error C2146: syntax error: missing ';' before identifier 'FT_SetChars'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(414): error C2146: syntax error: missing ';' before identifier 'FT_Purge'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(420): error C2146: syntax error: missing ';' before identifier 'FT_SetTimeouts'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(427): error C2146: syntax error: missing ';' before identifier 'FT_GetQueueStatus'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(433): error C2146: syntax error: missing ';' before identifier 'FT_SetEventNotification'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(440): error C2146: syntax error: missing ';' before identifier 'FT_GetStatus'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2086: 'int WINAPI': redefinition
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(293): note: see declaration of 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(448): error C2146: syntax error: missing ';' before identifier 'FT_SetBreakOn'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): error C2370: 'FT_STATUS': redefinition; different storage class
+  c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(60): note: see declaration of 'FT_STATUS'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): error C2146: syntax error: missing ';' before identifier 'WINAPI'
+c:\users\fliatondi\source\repos\lcdproject\lcdproject\ftd2xx.h(453): fatal error C1003: error count exceeds 100; stopping compilation
+  Generating Code...
