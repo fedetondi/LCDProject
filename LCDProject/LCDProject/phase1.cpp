@@ -1,16 +1,17 @@
 #include "phase1.h"
+#include <chrono>
 
 
 FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 {
 	BYTE temp;
-	/*std::chrono::seconds MaxTime(CONNECTING_TIME);/*The display has a settling time after the physical connection so the attempt to connect
-	will be done for a few seconds
+	std::chrono::seconds MaxTime(CONNECTING_TIME);/*The display has a settling time after the physical connection so the attempt to connect
+													will be done for a few seconds*/
 
 	std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
-	std::chrono::time_point<std::chrono::system_clock> current = start;*/
+	std::chrono::time_point<std::chrono::system_clock> current = start;
 
-	while (status != FT_OK /*&& ((current - start) < MaxTime)*/)//loop till succesful connection o max connecting time is exceeded
+	while (status != FT_OK && ((current - start) < MaxTime))//loop till succesful connection o max connecting time is exceeded
 	{
 		status = FT_OpenEx((void *)MY_LCD_DESCRIPTION, FT_OPEN_BY_DESCRIPTION, &deviceHandler);
 
@@ -56,42 +57,48 @@ FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 									}
 									else
 									{
-
+										error.type = WRITE_ERR;
+										error.detail = "Error writing to the LCD";
 									}
 								}
 								else
 								{
-
+									error.type = WRITE_ERR;
+									error.detail = "Error writing to the LCD";
 								}
 							}
 							else
 							{
-								
+								error.type = WRITE_ERR;
+								error.detail = "Error writing to the LCD";
 							}
 						}
 						else
 						{
-
+							error.type = WRITE_ERR;
+							error.detail = "Error writing to the LCD";
 						}
 					}
 					else
 					{
-
+						error.type = WRITE_ERR;
+						error.detail = "Error writing to the LCD";
 					}
 				}
 				else
 				{
-					printf("Error writing to the LCD\n");
+					error.type = WRITE_ERR;
+					error.detail = "Error writing to the LCD";
 				}
 			}
 			else
 			{
-				printf("Couldn't configure LCD\n");
+				error.type = CONFIG_ERR;
+				error.detail = "Couldn't configure LCD";
 			}
-
 			FT_Close(deviceHandler);
 		}
-		//current = std::chrono::system_clock::now();
+		current = std::chrono::system_clock::now();
 	}
 	
 }

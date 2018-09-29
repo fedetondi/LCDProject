@@ -67,6 +67,13 @@
 //
 typedef unsigned char BYTE;
 
+typedef enum {NO_ERR,WRITE_ERR,INIT_ERR,CONFIG_ERR}phase1err_t;
+
+typedef struct
+{
+	phase1err_t type;
+	std::string detail;
+}lcdErr_t;
 
 //	PROTOTIPOS
 
@@ -105,4 +112,5 @@ private:
 	DWORD sizeSent;
 	FT_STATUS status;
 	FT_HANDLE deviceHandler;
+	lcdErr_t error;
 };
