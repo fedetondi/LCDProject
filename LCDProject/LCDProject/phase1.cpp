@@ -24,17 +24,21 @@ FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 			{
 				temp = (FUNCTION_SET_8BITS & MSN) | LCD_E_ON;
 				//Finally executes the action "write to LCD"...
-				if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+				status = FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+				if (status == FT_OK)
 				{
 					Sleep(5);
-					if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+					status = FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+					if (status == FT_OK)
 					{
 						Sleep(1);
-						if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+						status = FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+						if (status == FT_OK)
 						{
 							Sleep(1);
 							temp = (FUNCTION_SET_4BITS & MSN) | LCD_E_ON;
-							if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+							status = FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+							if (status == FT_OK)
 							{
 								Sleep(1);
 								temp = FUNCTION_SET_4BITS;
@@ -56,37 +60,12 @@ FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 											}
 										}
 									}
-									else
-									{
-										error.type = WRITE_ERR;
-										error.detail = "Error writing to the LCD";
-									}
-								}
-								else
-								{
-									error.type = WRITE_ERR;
-									error.detail = "Error writing to the LCD";
 								}
 							}
-							else
-							{
-								error.type = WRITE_ERR;
-								error.detail = "Error writing to the LCD";
-							}
 						}
-						else
-						{
-							error.type = WRITE_ERR;
-							error.detail = "Error writing to the LCD";
-						}
-					}
-					else
-					{
-						error.type = WRITE_ERR;
-						error.detail = "Error writing to the LCD";
 					}
 				}
-				else
+				if(status != FT_OK)
 				{
 					error.type = WRITE_ERR;
 					error.detail = "Error writing to the LCD";
