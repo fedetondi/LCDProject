@@ -1,6 +1,7 @@
 #include "phase1.h"
 #include <chrono>
 
+#define CONNECTING_TIME 5
 
 FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 {
