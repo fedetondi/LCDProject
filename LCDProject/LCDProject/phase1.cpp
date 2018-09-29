@@ -3,7 +3,7 @@
 
 FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 {
-	FT_HANDLE lcdHandle;
+	BYTE temp;
 	/*std::chrono::seconds MaxTime(CONNECTING_TIME);/*The display has a settling time after the physical connection so the attempt to connect
 	will be done for a few seconds
 
@@ -12,29 +12,88 @@ FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 
 	while (status != FT_OK /*&& ((current - start) < MaxTime)*/)//loop till succesful connection o max connecting time is exceeded
 	{
-		status = FT_OpenEx((void *)MY_LCD_DESCRIPTION, FT_OPEN_BY_DESCRIPTION, &lcdHandle);
+		status = FT_OpenEx((void *)MY_LCD_DESCRIPTION, FT_OPEN_BY_DESCRIPTION, &deviceHandler);
 
 		if (status == FT_OK)
 		{
 			UCHAR Mask = 0xFF;	//Selects all FTDI pins.
 			UCHAR Mode = 1; 	// Set asynchronous bit-bang mode
-			if (FT_SetBitMode(lcdHandle, Mask, Mode) == FT_OK)	// Sets LCD as asynch bit mode. Otherwise it doesn't work.
+			if (FT_SetBitMode(deviceHandler, Mask, Mode) == FT_OK)	// Sets LCD as asynch bit mode. Otherwise it doesn't work.
 			{
+				temp = (FUNCTION_SET_8BITS & MSN) | LCD_E_ON;
 				//Finally executes the action "write to LCD"...
-				if (lcdWriteDR(&lcdHandle, ) == true)
+				if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
 				{
-					//If success continue with the program (...)
+					Sleep(5);
+					if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+					{
+						Sleep(1);
+						if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+						{
+							Sleep(1);
+							temp = (FUNCTION_SET_4BITS & MSN) | LCD_E_ON;
+							if (FT_Write(&deviceHandler, &temp, sizeof(BYTE), &sizeSent) == FT_OK)
+							{
+								Sleep(1);
+								temp = FUNCTION_SET_4BITS;
+								if (lcdWriteIR(&deviceHandler, temp) == true)
+								{
+									Sleep(1);
+									temp = DISPLAY_OFF;
+									if (lcdWriteIR(&deviceHandler, temp) == true)
+									{
+										Sleep(1);
+										temp = CLEAR_DISPLAY;
+										if (lcdWriteIR(&deviceHandler, temp) == true)
+										{
+											Sleep(10);
+											temp = ENTRY_MODE_SET;
+											if (lcdWriteIR(&deviceHandler, temp) == true)
+											{
+												error.type = NO_ERR;
+											}
+										}
+									}
+									else
+									{
+
+									}
+								}
+								else
+								{
+
+								}
+							}
+							else
+							{
+								
+							}
+						}
+						else
+						{
+
+						}
+					}
+					else
+					{
+
+					}
 				}
 				else
+				{
 					printf("Error writing to the LCD\n");
+				}
 			}
 			else
+			{
 				printf("Couldn't configure LCD\n");
+			}
 
-			FT_Close(lcdHandle);
+			FT_Close(deviceHandler);
 		}
 		//current = std::chrono::system_clock::now();
 	}
+	
 }
 
 bool FT_LCD::lcdWriteDR(FT_HANDLE * deviceHandler, BYTE valor)
