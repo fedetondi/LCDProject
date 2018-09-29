@@ -80,10 +80,9 @@ typedef struct
 class FT_LCD
 {
 public:
-	/*	lcdInit
-	*	Recibe:
-	*	Devuelve: puntero a controlador FTDI
-	*	Funcion: Inicializa el FTDI y el LCD
+	/*	FT_LCD
+	*	Recibe:		numero de display
+	*	Funcion:	Inicializa el FTDI y el LCD
 	*/
 	FT_LCD(int iDevice);
 

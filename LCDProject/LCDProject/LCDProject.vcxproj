@@ -88,6 +88,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Users\Emilia\source\repos\LCDProject\LCDProject\LCDProject\i386\ftd2xx.lib";%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -119,6 +122,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="hitachiLCD.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="phase1.cpp" />
     <ClCompile Include="phase2.cpp" />
   </ItemGroup>
