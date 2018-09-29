@@ -21,7 +21,7 @@ FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 			if (FT_SetBitMode(lcdHandle, Mask, Mode) == FT_OK)	// Sets LCD as asynch bit mode. Otherwise it doesn't work.
 			{
 				//Finally executes the action "write to LCD"...
-				if (lcdWriteDR(lcdHandle, ) == true)
+				if (lcdWriteDR(&lcdHandle, ) == true)
 				{
 					//If success continue with the program (...)
 				}
@@ -40,26 +40,48 @@ FT_HANDLE* FT_LCD::lcdInit(int iDevice)
 bool FT_LCD::lcdWriteDR(FT_HANDLE * deviceHandler, BYTE valor)
 {
 	BYTE temp = valor & MSN;	//me quedo con la parte alta del nybble
-	temp = temp | LCD_RS;		
-	lcdWriteNybble(deviceHandler, temp);
+	temp = temp | LCD_RS_ON;		
+	if (lcdWriteNybble(deviceHandler, temp) == true)
 	temp = ((valor & LSN) << 4) & MSN;
-	temp = temp | LCD_RS;
+	temp = temp | LCD_RS_ON;
 	lcdWriteNybble(deviceHandler, temp);
+}
+
+bool FT_LCD::lcdWriteIR(FT_HANDLE * deviceHandler, BYTE valor)
+{
+	BYTE temp = valor & MSN;
+	temp = temp | LCD_RS_OFF;	//register select para IR
+	if (lcdWriteNybble(deviceHandler, temp) == true)
+	{
+		temp = ((valor & LSN) << 4) & MSN;
+		temp = temp | LCD_RS_OFF;
+		if (lcdWriteNybble(deviceHandler, temp) == true)
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 bool FT_LCD::lcdWriteNybble(FT_HANDLE *deviceHandler, BYTE valor)
 {
 	BYTE temp = valor & (~PORT_P0);	//pongo el bit E en bajo nivel...  fijarse que pasa con el casteo entre int del define y el unsigned char, seria 0XFE
-	if (FT_Write(deviceHandler, &temp, sizeof(BYTE), sizeSent) == FT_OK)
+	status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+	if (status == FT_OK)
 	{
 		Sleep(1);
 		temp = valor | PORT_P0;		//prendo el bit del enable
-		if (FT_Write(deviceHandler, &temp, sizeof(BYTE), sizeSent) == FT_OK)
+		status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+		if (status == FT_OK)
 		{
 			Sleep(3);
 			temp = valor & (~PORT_P0);	//apago el enable para terminar de tomar el dato
-			if (FT_Write(deviceHandler, &temp, sizeof(BYTE), sizeSent);
-			Sleep(1);
+			status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
+			if (status == FT_OK)
+			{
+				Sleep(1);
+				return true;
+			}
 		}
 	}
 	return false;
