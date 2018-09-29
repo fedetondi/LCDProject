@@ -1,9 +1,11 @@
 #pragma once
 
-#include <iostream>
-#include "ftd2xx.h"
 #include<cstdio>
 #include<windows.h>
+#include <iostream>
+#define FTD2XX_EXPORTS
+#include "ftd2xx.h"
+
 
 #define MY_LCD_DESCRIPTION "EDA LCD 5 B"
 
@@ -53,12 +55,12 @@
 #define LCD_D7_OFF	(LCD_D7 ^ LCD_D7)
 
 //	INSTRUCCIONES
-#define CLEAR_DISPLAY	0000000001b
-#define RETURN_HOME		0000000010b
-#define ENTRY_MODE_SET	0000000110b
-#define	CURSOR_MOVE		0000010100b
-#define FUNCTION_SET	0000101000b
-
+#define CLEAR_DISPLAY		00000001b
+#define RETURN_HOME			00000010b
+#define ENTRY_MODE_SET		00000110b
+#define	CURSOR_MOVE			00010100b
+#define FUNCTION_SET_4BITS	00101000b
+#define FUNCTION_SET_8BITS	00111000b
 
 //
 typedef unsigned char BYTE;
