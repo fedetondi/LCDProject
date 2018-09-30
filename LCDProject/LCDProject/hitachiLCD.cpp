@@ -1,6 +1,6 @@
 #include "hitachiLCD.h"
-#define CLEAR_DISPLAY 0x01
-#define RETURN_HOME 0x02
+//#define CLEAR_DISPLAY 0x01
+//#define RETURN_HOME 0x02
 #define EOL1 16
 #define EOL2 32
 #define SET_DDRAM_ADD(x) ((x) | (0x80))		//porque la instruccion pide ese bit en 1
@@ -66,7 +66,7 @@ bool hitachiLCD::lcdClearToEOL()
 	return val;
 }
 
-basicLCD & hitachiLCD::operator<<(const unsigned char c)
+/*basicLCD & hitachiLCD::operator<<(const unsigned char c)
 {
 	// TODO: insert return statement here
 }
@@ -74,7 +74,7 @@ basicLCD & hitachiLCD::operator<<(const unsigned char c)
 basicLCD & hitachiLCD::operator<<(const unsigned char * c)
 {
 	// TODO: insert return statement here
-}
+}*/
 
 bool hitachiLCD::lcdMoveCursorUp()		
 {
