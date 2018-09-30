@@ -1,8 +1,6 @@
 #pragma once
-
 #include <iostream>
-#define FTD2XX_EXPORTS
-#include "ftd2xx.h"
+
 
 typedef struct
 {
