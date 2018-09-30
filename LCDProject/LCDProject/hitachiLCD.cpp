@@ -76,46 +76,74 @@ basicLCD & hitachiLCD::operator<<(const unsigned char * c)
 	// TODO: insert return statement here
 }
 
-bool hitachiLCD::lcdMoveCursorUp()				//FALA MOVER EL CURSOR CN LCDSETCURSOR
+bool hitachiLCD::lcdMoveCursorUp()		
 {
 	bool val = false;
+	cursorPosition cursor;
 	if (cadd <= EOL2 && cadd > EOL1)
 	{
 		cadd = cadd - 16;	
-		val = lcdSetCursorPosition();
+		cursor.row = 1;
+		cursor.column = cadd;
+		val = lcdSetCursorPosition(cursor);
 	}
 	return val;
 }
 
-bool hitachiLCD::lcdMoveCursorDown()			//FALA MOVER EL CURSOR CN LCDSETCURSOR
+bool hitachiLCD::lcdMoveCursorDown()			
 {
 	bool val = false;
+	cursorPosition cursor;
 	if (cadd <= EOL1)
 	{
-		cadd = cadd + 16;
-		val = true;
+		cadd = cadd + EOL1;
+		cursor.row = 2;
+		cursor.column = cadd - EOL1;
+		val = lcdSetCursorPosition(cursor);
 	}
 	return val;
 }
 
-bool hitachiLCD::lcdMoveCursorRight()			//FALA MOVER EL CURSOR CN LCDSETCURSOR
+bool hitachiLCD::lcdMoveCursorRight()			
 {
 	bool val = false;
+	cursorPosition cursor;
 	if (cadd < EOL2)
 	{
 		cadd++;
-		val = true;
+		if (cadd <= EOL1)
+		{
+			cursor.row = 1;
+			cursor.column = cadd;
+		}
+		else
+		{
+			cursor.row = 2;
+			cursor.column = cadd - EOL1;
+		}
+		val = lcdSetCursorPosition(cursor);
 	}
 	return val;
 }
 
-bool hitachiLCD::lcdMoveCursorLeft()			//FALA MOVER EL CURSOR CN LCDSETCURSOR
+bool hitachiLCD::lcdMoveCursorLeft()			
 {
 	bool val = false;
+	cursorPosition cursor;
 	if (cadd > 1)
 	{
 		cadd--;
-		val = true;
+		if (cadd <= EOL1)
+		{
+			cursor.row = 1;
+			cursor.column = cadd;
+		}
+		else
+		{
+			cursor.row = 2;
+			cursor.column = cadd - EOL1;
+		}
+		val = lcdSetCursorPosition(cursor);
 	}
 	return val;
 }
@@ -126,12 +154,12 @@ bool hitachiLCD::lcdSetCursorPosition(const cursorPosition pos)
 	if (pos.row == 1)
 	{
 		cadd = pos.column;
-		val = display.lcdWriteIR(SET_DDRAM_ADD(cadd));				//TENGO DUDAS ACA
+		val = display.lcdWriteIR(SET_DDRAM_ADD(cadd - 1));				//TENGO DUDAS ACA
 	}
 	else
 	{
 		cadd = pos.column + 16;
-		val = display.lcdWriteIR(SET_DDRAM_ADD((cadd & 0x0F) + 0x40));
+		val = display.lcdWriteIR(SET_DDRAM_ADD((cadd & 0x0F) + 0x40) - 1);		//TENGO DUDAS
 	}
 	return val;
 }
