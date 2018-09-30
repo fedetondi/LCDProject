@@ -3,7 +3,7 @@
 #define RETURN_HOME 0x02
 #define EOL1 16
 #define EOL2 32
-#define SET_DDRAM_ADD ((x) | (0x80))		//porque la instruccion pide ese bit en 1
+#define SET_DDRAM_ADD(x) ((x) | (0x80))		//porque la instruccion pide ese bit en 1
 
 hitachiLCD::hitachiLCD() : display(5)
 {
@@ -52,14 +52,14 @@ bool hitachiLCD::lcdClearToEOL()
 	{
 		for (count = cadd; count <= EOL1; count++)
 		{
-			val = display.lcdWriteDR();						//escribir espacio en blanco FALTA COMPLETAR
+			val = display.lcdWriteDR(' ');						
 		}
 	}
 	else
 	{
 		for (count = cadd; count >= EOL1 && count <= EOL2; count++)
 		{
-			val = display.lcdWriteDR();						//escribir espacio en blanco FALTA COMPLETAR
+			val = display.lcdWriteDR(' ');						
 		}
 	}
 	val = lcdSetCursorPosition(initial);
@@ -82,7 +82,7 @@ bool hitachiLCD::lcdMoveCursorUp()				//FALA MOVER EL CURSOR CN LCDSETCURSOR
 	if (cadd <= EOL2 && cadd > EOL1)
 	{
 		cadd = cadd - 16;	
-		val = true;
+		val = lcdSetCursorPosition();
 	}
 	return val;
 }
@@ -120,17 +120,18 @@ bool hitachiLCD::lcdMoveCursorLeft()			//FALA MOVER EL CURSOR CN LCDSETCURSOR
 	return val;
 }
 
-bool hitachiLCD::lcdSetCursorPosition(const cursorPosition pos)		//FALTA HACER
+bool hitachiLCD::lcdSetCursorPosition(const cursorPosition pos)		
 {
 	bool val;
-	val = display.lcdWriteIR(SET_DDRAM_ADD(cadd));
 	if (pos.row == 1)
 	{
 		cadd = pos.column;
+		val = display.lcdWriteIR(SET_DDRAM_ADD(cadd));				//TENGO DUDAS ACA
 	}
 	else
 	{
 		cadd = pos.column + 16;
+		val = display.lcdWriteIR(SET_DDRAM_ADD((cadd & 0x0F) + 0x40));
 	}
 	return val;
 }
