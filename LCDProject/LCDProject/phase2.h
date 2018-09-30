@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "phase1.h"
 
 
 typedef struct
