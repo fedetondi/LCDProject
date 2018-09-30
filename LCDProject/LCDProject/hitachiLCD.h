@@ -22,4 +22,5 @@ public:
 	virtual cursorPosition lcdGetCursorPosition();
 private:
 	FT_LCD display;
+	bool initOk;
 };

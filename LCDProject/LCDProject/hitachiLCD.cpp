@@ -7,7 +7,14 @@
 
 hitachiLCD::hitachiLCD() : display(5)
 {
-
+	if ((display.getError()).type == NO_ERR)
+	{
+		initOk = true;
+	}
+	else
+	{
+		initOk = false;
+	}
 }
 
 
@@ -17,14 +24,7 @@ hitachiLCD::~hitachiLCD()
 
 bool hitachiLCD::lcdInitOk()
 {
-	if ()							//NO SE QUE VA
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return initOk;
 }
 
 FT_STATUS hitachiLCD::lcdGetError()

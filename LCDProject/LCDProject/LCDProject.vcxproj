@@ -90,6 +90,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>"C:\Users\Emilia\source\repos\LCDProject\LCDProject\LCDProject\i386\ftd2xx.lib";%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\gonzalo\Desktop\EDA\LCDProject\LCDProject\LCDProject\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
