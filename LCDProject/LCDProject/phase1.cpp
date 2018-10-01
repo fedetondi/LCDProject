@@ -13,10 +13,12 @@ FT_LCD::FT_LCD(int iDevice)
 	std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
 	std::chrono::time_point<std::chrono::system_clock> current = start;
 
+	status = !FT_OK;
+
 	while (status != FT_OK && ((current - start) < MaxTime))//loop till succesful connection o max connecting time is exceeded
 	{
 		string description("EDA LCD ");
-		description += iDevice;
+		description += iDevice + '0';
 		description += " B";
 		status = FT_OpenEx((void *)description.c_str(), FT_OPEN_BY_DESCRIPTION, &deviceHandler);
 
@@ -61,6 +63,7 @@ FT_LCD::FT_LCD(int iDevice)
 											if (lcdWriteIR(temp) == true)
 											{
 												error.type = NO_ERR;
+												error.detail = "Display inicialization OK";
 											}
 										}
 									}
@@ -82,6 +85,11 @@ FT_LCD::FT_LCD(int iDevice)
 			}
 			FT_Close(deviceHandler);
 		}
+		else
+		{
+			error.type = OPEN_ERR;
+			error.detail = "Couldn't open LCD";
+		}
 		current = std::chrono::system_clock::now();
 	}
 }
@@ -91,7 +99,6 @@ bool FT_LCD::lcdWriteDR(BYTE valor)
 	bool ret = false;
 	BYTE temp = valor & MSN;	//me quedo con la parte alta del nybble
 	temp = temp | LCD_RS_ON;		
-	error.type = WRITE_ERR;
 	if (lcdWriteNybble(temp) == true)
 	{
 		temp = ((valor & LSN) << 4) & MSN;
@@ -102,7 +109,7 @@ bool FT_LCD::lcdWriteDR(BYTE valor)
 			ret = true;
 		}
 	}
-	if(error.type == WRITE_ERR)
+	if(!ret)
 	{
 		error.detail = "Error writing to LCD";
 	}
