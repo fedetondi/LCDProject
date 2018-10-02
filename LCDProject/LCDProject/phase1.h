@@ -59,15 +59,16 @@
 #define RETURN_HOME			0X02
 #define ENTRY_MODE_SET		0X06
 #define	CURSOR_MOVE			0X14
+#define DISPLAY_MOVE		0X18
 #define FUNCTION_SET_4BITS	0X28
 #define FUNCTION_SET_8BITS	0X38
-#define DISPLAY_OFF			0X08
+#define DISPLAY_OFF			0X0C
 #define DISPLAY_ON			0X0F
 
 //
 typedef unsigned char BYTE;
 
-typedef enum {NO_ERR,WRITE_ERR,INIT_ERR,CONFIG_ERR}phase1err_t;
+typedef enum {NO_ERR,WRITE_ERR,INIT_ERR,CONFIG_ERR, OPEN_ERR}phase1err_t;
 
 typedef struct
 {
@@ -85,7 +86,7 @@ public:
 	*	Funcion:	Inicializa el FTDI y el LCD
 	*/
 	FT_LCD(int iDevice);
-
+	~FT_LCD();
 	/*	lcdWriteIR
 	*	Recibe:		puntero al FTDI y valor de la instruccion
 	*	Devuelve:	"true" en caso de exito en la escritura
@@ -102,7 +103,7 @@ public:
 
 	FT_STATUS getStatus();
 	lcdErr_t getError();
-
+	
 private:
 	/*	lcdWriteNybble
 	*	Recibe:		puntero al FTDI y valor del dato a mostrar

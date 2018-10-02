@@ -28,23 +28,19 @@ FT_LCD::FT_LCD(int iDevice)
 			UCHAR Mode = 1; 	// Set asynchronous bit-bang mode
 			if (FT_SetBitMode(deviceHandler, Mask, Mode) == FT_OK)	// Sets LCD as asynch bit mode. Otherwise it doesn't work.
 			{
-				temp = (FUNCTION_SET_8BITS & MSN) | LCD_E_ON;
+				temp = FUNCTION_SET_8BITS & MSN;
 				//Finally executes the action "write to LCD"...
-				status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
-				if (status == FT_OK)
+				if (lcdWriteNybble(temp))
 				{
 					Sleep(5);
-					status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
-					if (status == FT_OK)
+					if (lcdWriteNybble(temp))
 					{
 						Sleep(1);
-						status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
-						if (status == FT_OK)
+						if (lcdWriteNybble(temp))
 						{
 							Sleep(1);
-							temp = (FUNCTION_SET_4BITS & MSN) | LCD_E_ON;
-							status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
-							if (status == FT_OK)
+							temp = (FUNCTION_SET_4BITS & MSN);
+							if (lcdWriteNybble(temp))
 							{
 								Sleep(1);
 								temp = FUNCTION_SET_4BITS;
@@ -62,8 +58,13 @@ FT_LCD::FT_LCD(int iDevice)
 											temp = ENTRY_MODE_SET;
 											if (lcdWriteIR(temp) == true)
 											{
-												error.type = NO_ERR;
-												error.detail = "Display inicialization OK";
+												Sleep(2);
+												temp = RETURN_HOME;
+												if (lcdWriteIR(temp))
+												{
+													error.type = NO_ERR;
+													error.detail = "Display inicialization OK";
+												}
 											}
 										}
 									}
@@ -83,7 +84,6 @@ FT_LCD::FT_LCD(int iDevice)
 				error.type = CONFIG_ERR;
 				error.detail = "Couldn't configure LCD";
 			}
-			FT_Close(deviceHandler);
 		}
 		else
 		{
@@ -92,6 +92,11 @@ FT_LCD::FT_LCD(int iDevice)
 		}
 		current = std::chrono::system_clock::now();
 	}
+}
+
+FT_LCD::~FT_LCD()
+{
+	FT_Close(deviceHandler);
 }
 
 bool FT_LCD::lcdWriteDR(BYTE valor)
@@ -142,17 +147,17 @@ bool FT_LCD::lcdWriteIR(BYTE valor)
 bool FT_LCD::lcdWriteNybble(BYTE valor)
 {
 	bool ret = false;
-	BYTE temp = valor & (~PORT_P0);	//pongo el bit E en bajo nivel...  fijarse que pasa con el casteo entre int del define y el unsigned char, seria 0XFE
+	BYTE temp = valor & (~LCD_E_ON);	//pongo el bit E en bajo nivel...  fijarse que pasa con el casteo entre int del define y el unsigned char, seria 0XFE
 	status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
 	if (status == FT_OK)
 	{
 		Sleep(1);
-		temp = valor | PORT_P0;		//prendo el bit del enable
+		temp = valor | LCD_E_ON;	//prendo el bit del enable
 		status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
 		if (status == FT_OK)
 		{
 			Sleep(3);
-			temp = valor & (~PORT_P0);	//apago el enable para terminar de tomar el dato
+			temp = valor & (~LCD_E_ON);	//apago el enable para terminar de tomar el dato
 			status = FT_Write(deviceHandler, &temp, sizeof(BYTE), &sizeSent);
 			if (status == FT_OK)
 			{

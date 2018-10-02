@@ -5,7 +5,9 @@
 #define EOL2 32
 #define SET_DDRAM_ADD(x) ((x) | (0x80))		//porque la instruccion pide ese bit en 1
 
-hitachiLCD::hitachiLCD() : display(5)
+using namespace std;
+
+hitachiLCD::hitachiLCD(int iDevice) : display(iDevice)
 {
 	if ((display.getError()).type == NO_ERR)
 	{
@@ -66,15 +68,64 @@ bool hitachiLCD::lcdClearToEOL()
 	return val;
 }
 
-/*basicLCD & hitachiLCD::operator<<(const unsigned char c)
+basicLCD & hitachiLCD::operator<<(const unsigned char c)
 {
-	// TODO: insert return statement here
+	if (validChar(c))
+	{
+		if (cadd <= EOL2)
+		{
+			display.lcdWriteDR(c);
+			cadd++;
+			if (cadd == EOL2 + 1)
+			{
+				lcdSetCursorPosition({ 1,1 });	//vuelve al principio
+			}
+			else
+			{
+				lcdUpdateCursor();
+			}
+		}
+		else
+		{
+			cout << "Cadd invalido" << endl;
+		}
+	}
+	else
+	{
+		cout << "Caracter no imprimible en el LCD" << endl;
+	}
+	return *this;
 }
 
-basicLCD & hitachiLCD::operator<<(const unsigned char * c)
+/*Debe recibir un puntero a un NULL TERMINATED const char *, de lo contrario no esta garantizado su funcionamiento
+Si el string entero entra en el LCD, se imprime sin borrar lo que hubiera.
+En caso que no entre, limpia el LCD e imprime en modo deslizante y al final queda en el LCD la ultima parte del texto
+*/
+basicLCD & hitachiLCD::operator<<(const char * c)
 {
-	// TODO: insert return statement here
-}*/
+	size_t size = strlen(c);
+	unsigned int nWritten;
+	if ( size <= EOL2 )	//si el string entra entero en el display, lo escribe
+	{
+		if (size > EOL2 - cadd)	//si el string no entra con lo que tiene escrito, lo borra
+		{
+			lcdClear();
+		}
+		for (nWritten = 0; nWritten < size; nWritten++)	
+		{
+			*this << static_cast<const unsigned char>(c[nWritten]);
+		}
+	}
+	else  //si el string entero no entra en el display imprime los ultimos 32 caracteres
+	{
+		lcdClear();
+		for (nWritten = 0; nWritten < EOL2 ; nWritten++)	
+		{
+			*this << static_cast<const unsigned char>(c[nWritten + size - EOL2]);
+		}
+	}
+	return *this;
+}
 
 bool hitachiLCD::lcdMoveCursorUp()		
 {
@@ -82,10 +133,13 @@ bool hitachiLCD::lcdMoveCursorUp()
 	cursorPosition cursor;
 	if (cadd <= EOL2 && cadd > EOL1)
 	{
-		cadd = cadd - 16;	
-		cursor.row = 1;
-		cursor.column = cadd;
-		val = lcdSetCursorPosition(cursor);
+		cadd -= EOL1;	
+		lcdUpdateCursor();
+		val = false;
+	}
+	else
+	{
+		cout << "Cursor en la primera linea, no se puede mover para arriba" << endl;
 	}
 	return val;
 }
@@ -93,13 +147,15 @@ bool hitachiLCD::lcdMoveCursorUp()
 bool hitachiLCD::lcdMoveCursorDown()			
 {
 	bool val = false;
-	cursorPosition cursor;
-	if (cadd <= EOL1)
+	if ( cadd <= EOL1 )
 	{
-		cadd = cadd + EOL1;
-		cursor.row = 2;
-		cursor.column = cadd - EOL1;
-		val = lcdSetCursorPosition(cursor);
+		cadd += EOL1;
+		lcdUpdateCursor();
+		val = true;
+	}
+	else
+	{
+		cout << "Cursor en la ultima fila, no se puede mover para abajo" << endl;
 	}
 	return val;
 }
@@ -107,21 +163,15 @@ bool hitachiLCD::lcdMoveCursorDown()
 bool hitachiLCD::lcdMoveCursorRight()			
 {
 	bool val = false;
-	cursorPosition cursor;
 	if (cadd < EOL2)
 	{
 		cadd++;
-		if (cadd <= EOL1)
-		{
-			cursor.row = 1;
-			cursor.column = cadd;
-		}
-		else
-		{
-			cursor.row = 2;
-			cursor.column = cadd - EOL1;
-		}
-		val = lcdSetCursorPosition(cursor);
+		lcdUpdateCursor();
+		val = true;
+	}
+	else
+	{
+		cout << "Cursor en la ultima posicion, no se puede mover a la derecha" << endl;
 	}
 	return val;
 }
@@ -129,37 +179,44 @@ bool hitachiLCD::lcdMoveCursorRight()
 bool hitachiLCD::lcdMoveCursorLeft()			
 {
 	bool val = false;
-	cursorPosition cursor;
 	if (cadd > 1)
 	{
 		cadd--;
-		if (cadd <= EOL1)
-		{
-			cursor.row = 1;
-			cursor.column = cadd;
-		}
-		else
-		{
-			cursor.row = 2;
-			cursor.column = cadd - EOL1;
-		}
-		val = lcdSetCursorPosition(cursor);
+		lcdUpdateCursor();
+		val = true;
+	}
+	else
+	{
+		cout << "Cursor en primera posicion, no se puede mover a la izquierda" << endl;
 	}
 	return val;
 }
 
 bool hitachiLCD::lcdSetCursorPosition(const cursorPosition pos)		
 {
-	bool val;
-	if (pos.row == 1)
+	bool val = false;
+	if ((pos.column >= 1) && (pos.column <= 32))
 	{
-		cadd = pos.column;
-		val = display.lcdWriteIR(SET_DDRAM_ADD(cadd - 1));				//TENGO DUDAS ACA
+		if (pos.row == 1)
+		{
+			cadd = pos.column;
+			lcdUpdateCursor();
+			val = true;
+		}
+		else if (pos.row == 2)
+		{
+			cadd = pos.column + 16;
+			lcdUpdateCursor();
+			val = true;
+		}
+		else
+		{
+			cout << "Fila invalida para el cursor" << endl;
+		}
 	}
 	else
 	{
-		cadd = pos.column + 16;
-		val = display.lcdWriteIR(SET_DDRAM_ADD((cadd & 0x0F) + 0x40) - 1);		//TENGO DUDAS
+		cout << "Columna invalida para el cursor" << endl;
 	}
 	return val;
 }
@@ -172,10 +229,35 @@ cursorPosition hitachiLCD::lcdGetCursorPosition()
 		pos.row = 1;
 		pos.column = cadd;
 	}
-	else
+	else if(cadd <= EOL2)
 	{
 		pos.row = 2;
 		pos.column = cadd - 16;
 	}
+	else
+	{
+		pos.row = -1;
+		pos.column = -1;
+		cout << "El cursor esta en una posicion invalida" << endl;
+	}
 	return pos;
+}
+
+/*Verifica que sea un caracter imprimible por el display*/
+bool hitachiLCD::validChar(const unsigned char c)
+{
+	return ((c >= 0x20) && (c <= 0x7F)) || ((c >= 0xA0) && (c < 0xFF));
+}
+
+/*Informa al display el valor de cadd, en caso que cadd este fuera de los limites del display, no hace nada*/
+void hitachiLCD::lcdUpdateCursor(void)
+{
+	if (cadd >= 1 && cadd <= EOL1)
+	{
+		display.lcdWriteIR(SET_DDRAM_ADD(cadd - 1));
+	}
+	else if ((cadd >= EOL1) && (cadd <= EOL2))
+	{
+		display.lcdWriteIR(SET_DDRAM_ADD((cadd-EOL1 + 0x40) - 1));
+	}
 }

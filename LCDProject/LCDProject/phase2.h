@@ -96,7 +96,7 @@ public:
 * basicLCD lcd;
 * lcd << “Hola” << “ “ << “Mundo”;
 *=====================================================*/
-	virtual basicLCD& operator<<(const unsigned char * c) = 0;
+	virtual basicLCD& operator<<(const char * c) = 0;
 	/*=====================================================
 	* Name: lcdMoveCursorUp
 	*
@@ -160,6 +160,7 @@ public:
 	* Devuelve una estructura tipo cursorPosition
 	*=====================================================*/
 	virtual cursorPosition lcdGetCursorPosition() = 0;
+	
 protected:
 	/*=====================================================
 	* Nota 1: cadd (cursor address) es una variable
@@ -186,6 +187,7 @@ protected:
 	* para cadd. Este nuevo valor de cadd deberá ser transferido
 	* al cursor del display para poder sincronizar ambos.
 	*=====================================================*/
-	void lcdUpdateCursor();
+	virtual void lcdUpdateCursor() = 0;
+
 };
 
