@@ -85,10 +85,6 @@ basicLCD & hitachiLCD::operator<<(const unsigned char c)
 				lcdUpdateCursor();
 			}
 		}
-		else
-		{
-			cout << "Cadd invalido" << endl;
-		}
 	}
 	else
 	{
@@ -114,7 +110,7 @@ basicLCD & hitachiLCD::operator<<(const char * c)
 		for (nWritten = 0; nWritten < size; nWritten++)	
 		{
 			*this << static_cast<const unsigned char>(c[nWritten]);
-		}
+		} 
 	}
 	else  //si el string entero no entra en el display imprime los ultimos 32 caracteres
 	{
@@ -127,23 +123,20 @@ basicLCD & hitachiLCD::operator<<(const char * c)
 	return *this;
 }
 
+/*Devuelve false si el cursor esta en la primera linea*/
 bool hitachiLCD::lcdMoveCursorUp()		
 {
 	bool val = false;
-	cursorPosition cursor;
 	if (cadd <= EOL2 && cadd > EOL1)
 	{
 		cadd -= EOL1;	
 		lcdUpdateCursor();
 		val = false;
 	}
-	else
-	{
-		cout << "Cursor en la primera linea, no se puede mover para arriba" << endl;
-	}
 	return val;
 }
 
+/*Devuelve false si el cursor esta en la segunda linea*/
 bool hitachiLCD::lcdMoveCursorDown()			
 {
 	bool val = false;
@@ -153,13 +146,10 @@ bool hitachiLCD::lcdMoveCursorDown()
 		lcdUpdateCursor();
 		val = true;
 	}
-	else
-	{
-		cout << "Cursor en la ultima fila, no se puede mover para abajo" << endl;
-	}
 	return val;
 }
 
+/*Devuelve false si el cursor esta en la ultima posicion*/
 bool hitachiLCD::lcdMoveCursorRight()			
 {
 	bool val = false;
@@ -169,13 +159,10 @@ bool hitachiLCD::lcdMoveCursorRight()
 		lcdUpdateCursor();
 		val = true;
 	}
-	else
-	{
-		cout << "Cursor en la ultima posicion, no se puede mover a la derecha" << endl;
-	}
 	return val;
 }
 
+/*Devuelve false si el cursor esta en la primera posicion*/
 bool hitachiLCD::lcdMoveCursorLeft()			
 {
 	bool val = false;
@@ -185,13 +172,10 @@ bool hitachiLCD::lcdMoveCursorLeft()
 		lcdUpdateCursor();
 		val = true;
 	}
-	else
-	{
-		cout << "Cursor en primera posicion, no se puede mover a la izquierda" << endl;
-	}
 	return val;
 }
 
+/*Devuelve false si era una posicion invaldia para el cursor*/
 bool hitachiLCD::lcdSetCursorPosition(const cursorPosition pos)		
 {
 	bool val = false;
@@ -209,14 +193,6 @@ bool hitachiLCD::lcdSetCursorPosition(const cursorPosition pos)
 			lcdUpdateCursor();
 			val = true;
 		}
-		else
-		{
-			cout << "Fila invalida para el cursor" << endl;
-		}
-	}
-	else
-	{
-		cout << "Columna invalida para el cursor" << endl;
 	}
 	return val;
 }
@@ -229,16 +205,10 @@ cursorPosition hitachiLCD::lcdGetCursorPosition()
 		pos.row = 1;
 		pos.column = cadd;
 	}
-	else if(cadd <= EOL2)
+	else
 	{
 		pos.row = 2;
 		pos.column = cadd - 16;
-	}
-	else
-	{
-		pos.row = -1;
-		pos.column = -1;
-		cout << "El cursor esta en una posicion invalida" << endl;
 	}
 	return pos;
 }

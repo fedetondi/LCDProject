@@ -48,7 +48,7 @@ FT_LCD::FT_LCD(int iDevice)
 								{
 									Sleep(1);
 									temp = DISPLAY_OFF;
-									if (lcdWriteIR(temp) == true)
+									if (lcdWriteIR(temp) == true) 
 									{
 										Sleep(1);
 										temp = CLEAR_DISPLAY;

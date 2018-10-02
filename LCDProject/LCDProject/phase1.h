@@ -101,7 +101,7 @@ public:
 	*/
 	bool lcdWriteDR(BYTE valor);
 
-	FT_STATUS getStatus();
+	FT_STATUS getStatus(); 
 	lcdErr_t getError();
 	
 private:
